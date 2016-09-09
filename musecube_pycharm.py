@@ -35,7 +35,6 @@ class MuseCube:
         return flux_normalized
     def substract_spec(self,spec,sky_spec):
         """
-
         :param spec: array[]
                      flux array of the region
         :param sky_spec: array[]
@@ -43,6 +42,7 @@ class MuseCube:
         :return: substracted_spec: array[]
                                    flux array of the region with the substraction of the sky
         """
+
         substracted_spec=[]
         n=len(spec)
         for i in xrange(0,n):
@@ -54,7 +54,7 @@ class MuseCube:
         w_sky,spec_sky=self.spectrum_ring_region( x_center, y_center, sky_radius_1,sky_radius_2, coord_system)
         self.draw_circle(x_center, y_center, sky_radius_1, 'Blue', coord_system)
         self.draw_circle(x_center, y_center, sky_radius_2, 'Blue', coord_system)
-        self.draw_circle(x_center, y_center, radius, 'Green', coord_system)
+        self.draw_circle(x_center, y_center, radius, 'Green', coord_ssdsdystem)
         reg=self.define_region(x_center,y_center,radius,coord_system)
         ring=self.define_ring_region(x_center,y_center,sky_radius_1,sky_radius_2,coord_system)
         normalization_factor=len(reg)/len(ring)
